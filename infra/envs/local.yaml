@@ -1,0 +1,3 @@
+name: local
+device: auto
+results_root: results

@@ -1,0 +1,5 @@
+method:
+  name: tt_solver
+  params:
+    external_root: external/PDE-backward-solver
+    require_license_review: true

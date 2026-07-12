@@ -1,0 +1,53 @@
+# Python and environments
+__pycache__/
+*.py[cod]
+.Python
+.venv/
+.uv/
+build/
+dist/
+*.egg-info/
+
+# Local configuration and credentials
+.env
+.agent/
+infra/envs/*.yaml
+!infra/envs/local.yaml
+!infra/envs/*.yaml.example
+*jwt*
+
+# Tests and tooling
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.pre-commit-cache/
+
+# Scientific artifacts (raw/large/machine-specific)
+results/
+outputs/
+logs/
+checkpoints/
+wandb/
+tensorboard/
+*.pt
+*.pth
+*.ckpt
+*.h5
+*.hdf5
+external/
+cloud_bundle/
+return_bundle/
+tmp/
+output/pdf/*
+!output/pdf/hdpde-technical-report.pdf
+
+# The training deck is retained locally but is not redistributed.
+training-107-competition.pdf
+
+# Editors and OS
+.DS_Store
+.idea/
+.vscode/
+*.swp

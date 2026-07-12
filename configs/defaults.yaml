@@ -1,0 +1,11 @@
+schema_version: 1
+seed: 0
+precision: fp32
+device: auto
+output:
+  root: results
+  checkpoint_every: 100
+  keep: [best, last]
+resume: false
+source_commit: unknown
+tags: {}

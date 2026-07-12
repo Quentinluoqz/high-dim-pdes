@@ -1,0 +1,5 @@
+equation:
+  name: e4_allen_cahn
+  dim: 100
+  params:
+    T: 0.3

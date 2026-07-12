@@ -1,0 +1,7 @@
+equation:
+  name: e2_lq_control
+  dim: 5
+  params:
+    T: 1.0
+    q: 1.0
+    q_terminal: 0.5

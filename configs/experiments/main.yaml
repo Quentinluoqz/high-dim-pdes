@@ -1,0 +1,10 @@
+name: main
+axes:
+  method: [deep_bsde_orig, deep_bsde_shared]
+  equation: [E1, E2, E3, E4]
+  dim: [5, 10, 25, 50, 100]
+  seed: [0, 1, 2]
+  precision: [tf32]
+route:
+  default: rtx5090
+overrides: []

@@ -1,0 +1,5 @@
+name: ustc107
+remote_root: /public/home/USER/hdpde
+module_python: python3.12/3.12
+module_cuda: cuda/13.0
+results_root: /public/home/USER/hdpde/results

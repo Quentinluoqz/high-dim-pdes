@@ -1,0 +1,11 @@
+name: rank
+axes:
+  method: [tt_cross]
+  equation: [E1, E2, E5]
+  dim: [5, 10, 25, 50, 100]
+  seed: [0]
+  precision: [fp64]
+  target_eps: [0.01, 0.001, 0.0001]
+route:
+  default: cpu
+overrides: []

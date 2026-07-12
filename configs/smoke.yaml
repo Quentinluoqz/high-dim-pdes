@@ -1,0 +1,16 @@
+inherits:
+  - defaults.yaml
+equation:
+  name: e5_heat
+  dim: 2
+  params:
+    T: 0.1
+method:
+  name: deep_bsde_orig
+  params:
+    steps: 5
+    batch_size: 32
+    iterations: 20
+    learning_rate: 0.01
+    scheduler_gamma: 1.0
+    gradient_clip: 10.0

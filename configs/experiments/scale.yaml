@@ -1,0 +1,12 @@
+name: scale
+axes:
+  method: [deep_bsde_orig]
+  equation: [E3]
+  dim: [100]
+  seed: [0, 1, 2]
+  precision: [tf32]
+  world_size: [1, 2]
+route:
+  default: a100
+overrides:
+  - method.params.global_batch_size=2048

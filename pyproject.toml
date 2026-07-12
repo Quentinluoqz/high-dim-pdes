@@ -1,0 +1,61 @@
+[build-system]
+requires = ["hatchling>=1.26"]
+build-backend = "hatchling.build"
+
+[project]
+name = "hdpde"
+version = "0.1.0"
+description = "Reproducible Deep BSDE and tensor-train benchmarks for high-dimensional PDEs"
+readme = "README.md"
+requires-python = ">=3.12"
+authors = [{name = "Quentinluoqz", email = "Quentinluoqz@users.noreply.github.com"}]
+dependencies = [
+  "h5py>=3.11,<4",
+  "matplotlib>=3.9,<4",
+  "numpy>=1.26,<3",
+  "pandas>=2.2,<3",
+  "pyyaml>=6.0.2,<7",
+  "requests>=2.32,<3",
+  "scipy>=1.13,<2",
+  "teneva==0.14.11",
+  "torch>=2.4,<3",
+]
+
+[project.optional-dependencies]
+dev = [
+  "mypy>=1.13,<2",
+  "pre-commit>=4,<5",
+  "pytest>=8.3,<9",
+  "pytest-cov>=6,<7",
+  "ruff>=0.9,<1",
+  "types-PyYAML>=6.0.12",
+  "types-requests>=2.32",
+]
+
+[project.scripts]
+hdpde-run = "hdpde.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/hdpde"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra --strict-markers"
+markers = [
+  "slow: long-running numerical validation",
+  "gpu: requires a CUDA device",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "W", "UP", "B", "C4", "SIM"]
+ignore = ["N803", "N806"]
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+warn_unused_configs = true
+packages = ["hdpde"]

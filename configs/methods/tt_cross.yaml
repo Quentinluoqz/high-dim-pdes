@@ -1,0 +1,13 @@
+method:
+  name: tt_cross
+  params:
+    grid_size: 32
+    target_error: 0.001
+    validation_size: 2000
+    test_size: 10000
+    continuous_test_size: 2000
+    max_sweeps: 20
+    max_evaluations: 200000
+    initial_rank: 1
+    rank_growth_min: 1
+    rank_growth_max: 4

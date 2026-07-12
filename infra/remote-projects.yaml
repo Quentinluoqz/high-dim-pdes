@@ -1,0 +1,20 @@
+project:
+  name: high-dim-pdes
+  local_repo_root: /Users/quentin/Documents/10_vibecoding/high-dim-pdes
+git_sync:
+  remote_name: origin
+  default_branch: main
+  strategy: github
+servers:
+  - name: ustc107
+    ssh_alias: ustc107
+    remote_repo_root: /public/home/$USER/hdpde
+    scheduler: slurm
+    launch_modes: [sbatch, scow]
+    env_activation: source /public/home/$USER/venv/hdpde/bin/activate
+policies:
+  code_runs_remote_only: true
+  data_remote_only: true
+  checkpoints_remote_only: true
+  require_clean_git_before_bundle: true
+  forbid_destructive_git_on_remote_without_confirmation: true

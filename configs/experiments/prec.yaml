@@ -1,0 +1,13 @@
+name: prec
+axes:
+  method: [deep_bsde_orig]
+  equation: [E1, E3]
+  dim: [25, 100]
+  seed: [0, 1, 2]
+  precision: [fp32, tf32, fp64]
+route:
+  rules:
+    - when: {precision: fp64}
+      cluster: a100
+  default: rtx5090
+overrides: []

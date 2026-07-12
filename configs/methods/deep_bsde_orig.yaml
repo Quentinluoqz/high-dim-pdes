@@ -1,0 +1,10 @@
+method:
+  name: deep_bsde_orig
+  params:
+    steps: 20
+    hidden_width_add: 10
+    batch_size: 64
+    iterations: 2000
+    learning_rate: 0.01
+    scheduler_gamma: 0.999
+    gradient_clip: 10.0

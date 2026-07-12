@@ -1,0 +1,5 @@
+equation:
+  name: e5_heat
+  dim: 5
+  params:
+    T: 1.0
